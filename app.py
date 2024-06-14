@@ -11,7 +11,8 @@ def get_db_connection():
                                  password='dbpassword',  # Replace with your RDS password
                                  db='devprojdb',   # Replace with your database name
                                  charset='utf8mb4',
-                                 cursorclass=pymysql.cursors.DictCursor)
+                                 cursorclass=pymysql.cursors.DictCursor
+                                 port=3306)
     return connection
 
 @app.route('/health')
